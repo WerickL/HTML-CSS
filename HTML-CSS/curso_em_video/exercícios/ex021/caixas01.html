@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        body{
+            background-color:rgb(197, 204, 206) ;
+        }
+        header > h1,nav{
+            text-align: center;
+        }
+        header > menu > nav{
+            display: none;
+            margin: 10px;
+        }
+        header > menu:hover > nav{
+            display: block;
+        }
+        abbr{
+            text-decoration: underline;
+        }
+        header{
+            background-color: cadetblue;
+           padding: 0.5px;
+           margin: 10px;
+        }
+        header > menu > h2{
+            background-color: rgb(100, 237, 180);
+            width: 70px;
+            margin: auto;
+            text-align: center;
+        }
+        header > menu > nav > a{
+            text-align: center;
+            text-decoration: none;
+            background-color: rgb(100, 237, 180);
+            padding: 2px;
+            margin: 5px;
+        }
+        section{
+            background-color: dimgray;
+            padding: 5px;
+            
+        }
+        aside{
+            background-color: teal;
+        }
+        header > menu{
+            padding: 0px;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+         <h1>Blog Ou hoje</h1>
+        <menu>
+            <h2>Menu</h2>
+            <nav>
+                <a href="#">Esportes</a>
+                <a href="#">Noticias</a>
+                <a href="#">Tecnologia</a>
+                <a href="#">Cinema</a>
+                <a href="#">Empregos</a>
+            </nav>
+        </menu>
+    </header>
+    <main>
+        <section>
+            <h3>Esportes</h3>
+            <article>
+                <h4><strong>O Messi vai sair do Barcelona?</strong></h4> 
+                <p>
+                    Messi comentou que pensa sim em sair do Barcelona, e jogar em outro time grande, que time seria esse?<br>
+                    Pesquisas apontam que o principal destino em uma possível saída seria o <abbr title="en: Vasco of Gama">Vasco da Gama</abbr> <br>
+                </p>
+                <aside>
+                    Saiba como isso afeta o Grêmio, amanhã, aqui mesmo no Ou Hoje.
+                </aside>
+            </article>
+        </section>
+        <section>
+            <h3>Noticias</h3>
+            <article>
+                <h4><strong>Ucrânia irá receber ajuda de outros países?</strong></h4>
+                <p>A Rússia declarou que se alguém interferir na sua guerra particular, vai encher o rabão deles de bomba atômica. <br> A União Europeia revelou interesse em aceitar a Ucrânia como seu mais novo país membro, será esse o incio de um 3° guerra mundial?</p>
+                <aside>pelo colunista Flavin do Pneu</aside>
+            </article>
+        </section>
+        <section>
+            <h3>Cinema</h3>
+            <article>
+                <h4><strong>O que irá acontecer no multiverso da loucura?</strong></h4>
+                <p>Não é novidade que a Marvel tem deixado os fãs alvoroçados com o novo filme de Doutor estranho, o multiverso da loucura promete e muito, desde que, o crossover extremamente esperado em <em>Homem Aranha sem volta pra casa</em> foi entregue pela Marvel, ,e com a promessa de um multiverso podendo ter de tudo, os fãs estão sonhando alto, desde X-man até qurteto fantástico, todo mundo na telona JUNTOS, e convenhamos, isso seria muuito legal. não percam, 5 de maio nos cinemas.</p>
+            </article>
+        </section>
+    </main>
+    
+</body>
+</html>

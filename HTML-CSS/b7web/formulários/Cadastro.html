@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Tela de Login</h1>
+    <form action="Login.html" method="post" name="inf-login">
+        <label >
+            Endereço de email: <br>
+            <input type="email"  name="email_do_usuario" class="texto">
+        </label>
+        <label>
+            Senha: <br>
+            <input type="password" name="senha_do_usuario" class="texto">
+        </label>
+        <label>
+            Número de telefone <br>
+            <input type="number"  name="numero_de_telefone" class="texto">
+        </label>
+        <label>
+            Data de Nascimento <br>
+            <input type="date"  name="Data_de_nascimento" class="texto">
+        </label>
+        <label>
+            Sexo: <br>
+            <input type="radio" name="sexo" value="masculino">
+            Masculino 
+            <input type="radio" name="sexo" value="feminino">
+            feminino
+        </label>
+        <label>
+            <input type="checkbox" name="termos" value="termos de compromisso">
+            Aceitar os termos de compromisso.
+        </label>
+        <input type="submit" value="Cadastrar" name="enviar_dados">
+    </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+}
+@keyframes animacao1{
+    0%{background-image: linear-gradient(45deg, rgb(0, 252, 147),rgb(0, 153, 255)); top: 0; left: 0;}
+    25%{background-image: linear-gradient(45deg, rgb(68, 0, 255), rgb(252, 0, 126));top: 0; left: 400px;}
+    50%{background-image: linear-gradient(45deg, rgb(255, 0, 157), rgb(252, 206, 0));top: 400px; left: 400px;}
+    75%{background-image: linear-gradient(45deg, rgb(238, 255, 0), rgb(155, 252, 0));top: 400px; left: 0;}
+    100%{background-image: linear-gradient(45deg, rgb(0, 252, 147),rgb(0, 89, 255));top: 0; left: 0;}
+}
+
+.animacao{
+    background-image: linear-gradient(45deg, rgb(0, 252, 155),rgb(0, 119, 255) );
+    position: absolute;
+    animation-duration: 4s;
+    width: 30%;
+    height: 60%;
+    top: 5%;
+    left: 5%;
+    animation-name: animacao1;
+    animation-duration: 4s;
+    animation-delay: 1.5s;
+}
+.area{
+    position: relative;
+    
+    padding: 0 15% 25% 15%;
+    margin: 10px 300px 300px 300px;
+
+}
