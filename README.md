@@ -1,2 +1,1 @@
-# HTML-CSS
- Material desenvolvido e utilizado no aprndizado e prática de HTML e CSS
+Nessa pasta eu guardo os arquivos usados no aprendizado de HTML e CSS.
