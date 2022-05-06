@@ -32,6 +32,9 @@ a{
 ul{
   list-style: none;
 }
+img{
+  max-height: 100%;
+}
 .container{
   width: 37.5rem;
   margin-inline: auto;
@@ -39,11 +42,11 @@ ul{
 }
 nav{
   display: flex;
- 
   height: var(--height-nav);
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100vw;
+  z-index: 10;
+  background-color: #DCE9E2; 
 }
 
 .scroll{
@@ -62,20 +65,25 @@ nav .container{
   align-items: center;
 }
 .menu, .close-menu, body.menu-expanded .open-menu{
-  display: none;
+  visibility: hidden;
 }
 body.menu-expanded > :not(nav){
-  display: none;
+  visibility: hidden;
+}
+.menu{
+  transform: translateY(100%);
 }
 body.menu-expanded .menu{
-  display: block;
+  visibility: visible;
   position: fixed;
   background-color: var(--cor-primaria);
   left: 0;
   top: 0;
   width: 100%;
   height: 100vh;
-  z-index: -1;
+  z-index: -100;
+  transition: transform 200ms;
+  transform: translateY(0);
 }
 body.menu-expanded .logo  path{
   fill: white;
@@ -90,13 +98,14 @@ nav button{
 }
 body.menu-expanded{
   overflow:hidden;
+  visibility: visible;
 }
 body.menu-expanded nav{
-  position: relative;
+ 
  
 }
 body.menu-expanded .close-menu{
-  display: block;
+  visibility: visible;
 }
 .menu ul{
   display: flex;
@@ -131,7 +140,10 @@ ul.social-links{
   margin-top: 8rem;
 
 }
-header.main img{
+#main h4{
+  padding-top: calc(4rem + var(--height-nav));
+}
+#main img{
   margin-top: 6rem;
   display: block;
   margin-inline: auto;
@@ -139,7 +151,7 @@ header.main img{
   width: 26.3rem;
 }
 
-header.main::before{
+#main::before{
   content: "";
   height:calc(108rem + var(--height-nav));
   width: 100%;
@@ -151,26 +163,28 @@ header.main::before{
   z-index: -1;
 
 }
-header.main h4{
-  font-size: 1.4rem;
+section header h4{
   color: var(--cor-primaria);
-  padding-top: calc(4rem + var(--height-nav));
-
+   font-weight: bold;
+   font-size: 1.4rem;
+   line-height: 150%;
+   letter-spacing: 0.08rem;
+   text-transform: uppercase;
 }
-header.main h1{
+section header h1{
   font-size: 3.4rem;
   color: var(--cor-secundaria-gray-headline);
   line-height: 130%;
   margin-top: 1.6rem;
 }
-header.main p{
+section .content p{
   font-size: 1.8rem;
   color: var(--cor-secundaria-gray-paragraph);
   line-height: 150%;
   margin-top: 2.4rem;
   
 }
-header.main button a {
+#main button a {
   background-color: var(--cor-primaria);
   margin-top: 3.2rem;
   border: none;
@@ -214,15 +228,7 @@ header.main button a {
 #services {
   padding-block: 10rem;
 }
- #services header h4{
-   color: var(--cor-primaria);
-   font-weight: bold;
-   font-size: 1.4rem;
-   line-height: 150%;
-   letter-spacing: 0.08rem;
-   text-transform: uppercase;
- }
- #services header h2{
+ section header h2{
   font-weight: 700;
   font-size: 3rem;
   line-height: 3.9rem;
@@ -260,3 +266,22 @@ header.main button a {
    font-size: 1.6rem;
    color: #495057;
  }
+ #about{
+text-align: left;
+background-color: #FFFAF1;
+padding-block: 10rem;
+ }
+ #about header h4{
+   
+ }
+#about header h2{
+  margin-bottom: 2.4rem;
+  text-align: left;
+  margin-inline: 0;
+}
+#about header p{
+  font-size: 1.6rem;
+}
+#about .content img{
+  margin-top: 6rem;
+}
