@@ -17,4 +17,4 @@ ScrollReveal({
   origin: 'left',
   duration: 700,
   distance: '50px',
-}).reveal(`#main,.cont-statistics,img, #services header, .card, #about header, #about .content`);
+}).reveal(`#main,.cont-statistics,img, #services header, .card, #about header, #about .content, #contato header, #contato .content`);
