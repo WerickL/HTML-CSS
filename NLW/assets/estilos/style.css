@@ -365,5 +365,20 @@ footer p{
   }
   nav#navi .close-menu, 
   nav#navi .open-menu,
-  nav#navi .social-links
+  nav#navi .social-links{
+    display: none;
+  }
+  nav#navi .menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+  }
+  nav#navi .menu ul:nth-child(1){
+    display: flex;
+    gap: 3.2rem;
+  }
+  nav#navi .menu ul li a{
+    color: var(--cor-primaria);
+  }
 }
