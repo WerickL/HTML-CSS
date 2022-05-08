@@ -552,4 +552,28 @@ footer p{
   #about .col-a  p{
     margin-top: 0;
   }
+  section#contato{
+    padding-block: 16rem;
+  }
+  #contato .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 14rem;
+  }
+  #contato .col-a h2{
+    text-align: left;
+    padding-right: 6.5rem;
+  }
+  footer{
+    padding-block: 0;
+  }
+  footer .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 8rem;
+    padding-inline: 12rem;
+  }
 }
