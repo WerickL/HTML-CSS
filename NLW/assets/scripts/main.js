@@ -3,9 +3,12 @@ onScroll()
 function onScroll(){
   showNav()
   showToTop()   
-  activateMenuSection('main') 
-  activateMenuSection('services') 
-  activateMenuSection('about') 
+  activateMenuSection(main) 
+  activateMenuSection(services) 
+  activateMenuSection(about) 
+  activateMenuSection(contato) 
+  
+ 
 }
 
 function activateMenuSection(section){
@@ -13,14 +16,22 @@ function activateMenuSection(section){
   const sectionTop = section.offsetTop
   const sectionHeight = section.offsetHeight
   //section alcançou a linha
-  const sectionTopReachOrPassedTargetLine = targetLine >= innerHeight
-  //dim da section
-  const sectionEndAt = sectionTop +  sectionHeight
+  const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop
+  //fim da section
+  const sectionEndAt = sectionTop + sectionHeight
   //passou da linha
   const sectionEndPassedTargetLine = sectionEndAt <= targetLine
   //dentro dos limites
   const sectionsBoundaries = sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine
-  
+  //id da variável section
+  const sectionId = section.getAttribute('id')
+  //
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
+  //condicionais
+  menuElement.classList.remove('active')
+  if(sectionsBoundaries){
+    menuElement.classList.add('active')
+  }
 
 }
 

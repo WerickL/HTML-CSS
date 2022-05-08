@@ -338,6 +338,8 @@ footer p{
   right: 5%;
   visibility: hidden;
   transform: translateY(100%);
+  border: 2px solid white;
+  border-radius: 50%;
 
 }
 #toTop.show{
@@ -444,7 +446,7 @@ footer p{
     font-weight: 700;
     font-size: 1.4rem;
   }
-  nav#navi.scroll .menu a.button:hover{
+  nav#navi.scroll .menu a.button:hover, nav#navi .menu a.button.active{
     background-color: #FFFFFF;
     color: var(--cor-primaria);
     box-shadow: none;
@@ -576,4 +578,4 @@ footer p{
     padding-block: 8rem;
     padding-inline: 12rem;
   }
-}
+} 
