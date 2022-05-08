@@ -108,7 +108,7 @@ body.menu-expanded .close-menu{
   visibility: visible;
   position: static;
 }
-.menu ul{
+.menu ul:nth-child(1){
   display: flex;
   flex-direction: column;
   gap: 4.8rem;
@@ -134,16 +134,16 @@ body.menu-expanded .close-menu{
   margin-top: 6rem;
   margin-bottom: 8rem;
 }
-.button:hover{
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.568) inset;
+body.menu-expanded a.button:hover{
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  background-color: var(--cor-primaria);
 }
-ul.social-links{
+ ul.social-links{
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 3.2rem;
-  
-
 }
 #main h4{
   padding-top: calc(4rem + var(--height-nav));
@@ -155,7 +155,6 @@ ul.social-links{
   object-position: 0 2rem;
   width: 26.3rem;
 }
-
 #main::before{
   content: "";
   height:calc(108rem + var(--height-nav));
@@ -280,9 +279,6 @@ text-align: left;
 background-color: #FFFAF1;
 padding-block: 10rem;
  }
- #about header h4{
-   
- }
 #about header h2{
   margin-bottom: 2.4rem;
   text-align: left;
@@ -362,6 +358,7 @@ footer p{
     font-weight: initial;
     color: initial;
     background-color: initial;
+    text-align: initial;
   }
   nav#navi .close-menu, 
   nav#navi .open-menu,
@@ -373,12 +370,81 @@ footer p{
     align-items: center;
     justify-content: space-between;
     width: 60%;
+    
   }
   nav#navi .menu ul:nth-child(1){
     display: flex;
     gap: 3.2rem;
+    
   }
   nav#navi .menu ul li a{
+    display: inline-block;
     color: var(--cor-primaria);
+    opacity: 0.7;
+    transition: opacity 0.4s;
+  }
+  nav#navi .menu ul li a:hover, nav#navi .menu ul li a.active{
+    opacity: 1;
+    font-weight: 700;
+  }
+  nav#navi .menu ul li a::after{
+    content: "";
+    width: 0;
+    height: .2rem;
+    background-color: var(--cor-primaria);
+    display: block;
+    position: relative;
+    bottom: -2.5rem;
+    left: -0.5rem;   
+  }
+  nav#navi .menu ul li a:hover::after, nav#navi .menu ul li a.active::after{
+    width: 100%;
+    padding-inline: 0.5rem;
+    transition: width 0.2s;
+  }
+  nav#navi .menu a.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2.4rem;
+    border: 1px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+  nav#navi .menu a.button:hover{
+    background-color: var(--cor-primaria);
+    color: #FFFFFF;
+    box-shadow: none;
+    transition: 200ms;
+  }
+  nav#navi.scroll .menu a.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2.4rem;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+  nav#navi.scroll .menu a.button:hover{
+    background-color: #FFFFFF;
+    color: var(--cor-primaria);
+    box-shadow: none;
+    transition: 200ms;
+  }
+  nav#navi.scroll .menu ul li a{
+    color: #F7F9F9;
+  }
+  nav#navi.scroll .menu ul li a::after{
+    content: "";
+    background-color: #F7F9F9;
+  }
+  #main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex: 1;
   }
 }
