@@ -145,6 +145,9 @@ body.menu-expanded a.button:hover{
   justify-content: center;
   gap: 3.2rem;
 }
+#main{
+  padding-block: 0;
+}
 #main h4{
   padding-top: calc(4rem + var(--height-nav));
 }
@@ -157,7 +160,7 @@ body.menu-expanded a.button:hover{
 }
 #main::before{
   content: "";
-  height:calc(76% + var(--height-nav));
+  height:calc(80% + var(--height-nav));
   width: 100%;
   background-color: #DCE9E2;
   display: block;
@@ -352,6 +355,13 @@ footer p{
   .container{
     width: min(112rem, 100%);
   }
+  section{
+    padding-block:16rem ;
+  }
+  section header h2{
+    font-size: 4rem;
+    line-height: 5.2rem;
+   }
   nav#navi .container *{
     margin: 0;
     padding: 0;
@@ -508,6 +518,19 @@ footer p{
   }
   #main::before{
     height:calc(95% - var(--height-nav));
+  }
+  #services h2{
+    max-width: 47rem;
+    margin: auto;
+  }
+  #services .cards{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+  #services .card{
+    max-width: 30%;
+    flex-grow: 1;
   }
  
 }
