@@ -2,8 +2,28 @@ window.addEventListener('scroll', onScroll)
 onScroll()
 function onScroll(){
   showNav()
-  showToTop()    
+  showToTop()   
+  activateMenuSection('main') 
+  activateMenuSection('services') 
+  activateMenuSection('about') 
 }
+
+function activateMenuSection(section){
+  const targetLine = scrollY + innerHeight / 2
+  const sectionTop = section.offsetTop
+  const sectionHeight = section.offsetHeight
+  //section alcançou a linha
+  const sectionTopReachOrPassedTargetLine = targetLine >= innerHeight
+  //dim da section
+  const sectionEndAt = sectionTop +  sectionHeight
+  //passou da linha
+  const sectionEndPassedTargetLine = sectionEndAt <= targetLine
+  //dentro dos limites
+  const sectionsBoundaries = sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine
+  
+
+}
+
 function showNav(){
   if(scrollY > 0){
     navi.classList.add('scroll')
