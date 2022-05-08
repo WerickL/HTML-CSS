@@ -532,5 +532,24 @@ footer p{
     max-width: 30%;
     flex-grow: 1;
   }
- 
+  section#about .container {
+    display: flex;
+   flex-direction: row-reverse;
+   padding: 1.6rem;
+   gap: 6.7rem;
+  }
+  #about .col-a, #about .col-b{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #about .col-a h2{
+    margin-top: 1rem;
+    margin-bottom: 2.4rem;
+  }
+  #about .col-a  p{
+    margin-top: 0;
+  }
 }
