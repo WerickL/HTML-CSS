@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+:root{
+  --font-steve:'Lato', sans-serif;
+  --menu-height: 70px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+body{
+  background-color: #E9E9E9E9;
+  font-family: var(--font-steve);
+}
+.container{
+  width: 1024px;
+  margin: auto;
+}
+.menu{
+  padding-inline: 25px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  border-radius:  0 0 10px 10px;
+  color: white;
+  align-items: center;
+}
+.menu img{
+  width: 70px;
+}
+.apresentacao{
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-top:30px;
+  border-radius: 10px 10px 0 0;
+  height: calc(94vh - var(--menu-height));
+}
+.apresentacao .col-a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.apresentacao .col-b{
+  flex: 1;
+  height: 100%;
+}
+.apresentacao .col-b img{
+  height: 100%;
+  transform: scaleX(-1);
+}
+.content{
+  background-color: #d4d4d4;
+  display: flex;
+  gap: 50px;
+  padding: 30px;
+  border-radius: 0px 0px 10px 10px;
+  
+}
+.content .col-a{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: center;
+  max-width: 40%;
+  justify-content: space-around;
+}
+.col-a .facts{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-block: 30px;
+}
+.content .col-a img{
+  max-width: 100%;
+  flex: 1;
+}
+.line-time{
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.line-time .dot-time{
+  font-size: 16px;
+  font-weight: bold;
+}
+.dot-time:not(.dot-time:last-child)::after{
+  content: "";
+  background-color: #000000;
+  display: block;
+  height: 50px;
+  width: 4px;
+  margin-left: 3px;
+}
+.dot-time::before{
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  background-color: #000000;
+  display:inline-block;
+  margin-right: 5px;
+  align-self: center;
+  
+}
+.frase{
+  width: 75%;
+  height: 200px;
+  padding: 50px;
+  margin: auto;
+  border: 1px solid #DCE9E2;
+  border-radius: 30px  30px 0px 30px ;
+  background-color: white;
+  margin-block: 30px;
+}
+.frase svg path{
+  fill: #0E0E0E;
+}
+.frase p{
+  text-align: justify;
+  font-size: 20px;
+  color: #495057;
+  margin-top: 10px;
+}
+.frase h5{
+  font-size: 22px;
+  color: #000000;
+  margin-top: 20px;
+}
+
