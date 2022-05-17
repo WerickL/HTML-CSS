@@ -12,6 +12,13 @@ body{
   background-color: #E9E9E9E9;
   font-family: var(--font-steve);
 }
+a{
+  text-decoration: none;
+  color: unset;
+}
+a:hover{
+  text-decoration: underline;
+}
 .container{
   width: 1024px;
   margin: auto;
@@ -56,7 +63,6 @@ body{
   display: flex;
   gap: 50px;
   padding: 30px;
-  border-radius: 0px 0px 10px 10px;
   
 }
 .content .col-a{
@@ -106,15 +112,24 @@ body{
   align-self: center;
   
 }
+.citacao{
+  background-image: url(https://s2.glbimg.com/yVby3k_kq4aQYxVq0XFVPXvk8tU=/940x523/e.glbimg.com/og/ed/f/original/2015/09/11/steve_jobs.jpg);
+  height: 500px;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+
+}
 .frase{
-  width: 75%;
-  height: 200px;
-  padding: 50px;
-  margin: auto;
+  width: 45%;
+  height: auto;
+  padding: 40px;
   border: 1px solid #DCE9E2;
   border-radius: 30px  30px 0px 30px ;
   background-color: white;
-  margin-block: 30px;
+  margin-left: 15px;
 }
 .frase svg path{
   fill: #0E0E0E;
@@ -125,9 +140,24 @@ body{
   color: #495057;
   margin-top: 10px;
 }
-.frase h5{
+.frase .nome-citacao{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+.frase .nome-citacao img{
+  width: 60px;
+}
+.frase .nome-citacao h5{
   font-size: 22px;
   color: #000000;
-  margin-top: 20px;
 }
-
+footer div{
+  color: white;
+  background-color: #000000;
+  height: 50px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
