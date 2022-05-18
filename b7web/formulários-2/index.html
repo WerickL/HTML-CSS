@@ -8,82 +8,86 @@
   <title>Cadastro</title>
 </head>
 <body>
-  <h1>Cadastro</h1>
-  <form action="">
-    <fieldset id="conta">
-      <h2>Login</h2>
-      <input type="email" placeholder="Digite seu e-mail" required>
-      <input type="email" placeholder="Confirme seu e-mail" required>
-      <input type="password" placeholder="Crie uma senha" required>
-      <input type="password" placeholder="Confirme sua senha" required>
-    </fieldset>
-    <fieldset id="pessoa">
-      <h2>Dados Cadastrais</h2>
-      <div class="tipo-pessoa">
-        <label>Pessoa Física<input name="tp" type="radio" required></label>
-        <label >pessoa Jurídica<input name="tp" type="radio" required></label>
-      </div>
-      <div class="dados-pessoa">
-        <input type="text" placeholder="Nome Completo" required>
-        <label for="pessoa-sexo">sexo</label>
-        <select name="sexo" id="pessoa-sexo" required>
-          <option value="" disabled selected >Escolher</option>
-          <option value="M">Masculino</option>
-          <option value="F">Feminino</option>
-        </select>
-        <input type="text" name="cpf" placeholder="CPF" maxlength="11" required>
-        <input type="number" placeholder="Telefone">
-        <label>data de Nascimento<input type="date" required></label>
+  <div class="container">
+    <h1>Cadastro</h1>
+    <form action="">
+      <fieldset id="conta">
+        <h2>Login</h2>
+        <input class="email" type="email" placeholder="Digite seu e-mail" required>
+        <input class="e-confirm" type="email" placeholder="Confirme seu e-mail" required>
+        <input class="pass" type="password" placeholder="Crie uma senha" required>
+        <input class="pass-confirm" type="password" placeholder="Confirme sua senha" required>
+      </fieldset>
+      <fieldset id="pessoa">
+        <h2>Dados Cadastrais</h2>
+        <div class="tipo-pessoa">
+          <label>Pessoa Física<input name="tp" type="radio" required></label>
+          <label>pessoa Jurídica<input name="tp" type="radio" required></label>
+        </div>
+        <div class="dados-pessoa">
+          <input type="text" placeholder="Nome Completo" required>
+          <label for="pessoa-sexo">sexo</label>
+          <select name="sexo" id="pessoa-sexo" required>
+            <option value="" disabled selected >Escolher</option>
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+          </select>
+          <input type="text" name="cpf" placeholder="CPF" maxlength="11" required>
+          <input type="number" placeholder="Telefone">
+          <label>data de Nascimento<input type="date" required></label>
+          <label>
+            <input type="checkbox" checked>
+            Receber Ofertas no e-mail
+          </label>
+        </div>
+      </fieldset>
+      <fieldset id="entrega">
+        <h2>Endereço</h2>
+        <input type="text" placeholder="CEP" required>
+        <input type="text" placeholder="Rua" required>
+        <input type="number" placeholder="Número" required>
+        <label><input type="checkbox"> Sem Número</label>
+        <input type="text" placeholder="Complemento">
+        <input type="text" placeholder="Referência" required>
+        <input type="text" placeholder="Bairro" required>
+        <input type="text" placeholder="Cidade" required>
         <label>
-          <input type="checkbox" checked>
-          Receber Ofertas no e-mail
+          Estado
+          <select name="Estado" id="estado-br" required>
+            <option value="" selected disabled>Escolher</option>
+            <option value="">Acre</option>
+            <option value="">Alagoas</option>
+            <option value="">Amapá</option>
+            <option value="">Amazonas</option>
+            <option value="">Bahia</option>
+            <option value="">Ceará</option>
+            <option value="">Distrito Federal</option>
+            <option value="">Espírito Santo</option>
+            <option value="">Goiás</option>
+            <option value="">Maranhão</option>
+            <option value="">Mato Grosso</option>
+            <option value="">Mato Grosso do Sul</option>
+            <option value="">Minas Gerais</option>
+            <option value="">Pará</option>
+            <option value="">Paraiba</option>
+            <option value="">Paraná</option>
+            <option value="">Pernambuco</option>
+            <option value="">Piauí</option>
+            <option value="">Rio de Janeiro</option>
+            <option value="">Rio Grande do Sul</option>
+            <option value="">Rondônia</option>
+            <option value="">Roraima</option>
+            <option value="">Santa Catarina</option>
+            <option value="">São Paulo</option>
+            <option value="">Sergipe</option>
+            <option value="">Tocantins</option>
+          </select>
         </label>
-      </div>
-    </fieldset>
-    <fieldset id="entrega">
-      <h2>Endereço</h2>
-      <input type="text" placeholder="CEP" required>
-      <input type="text" placeholder="Rua" required>
-      <input type="number" placeholder="Número" required>
-      <label><input type="checkbox"> Sem Número</label>
-      <input type="text" placeholder="Complemento">
-      <input type="text" placeholder="Referência" required>
-      <input type="text" placeholder="Bairro" required>
-      <input type="text" placeholder="Cidade" required>
-      <label>
-        Estado
-        <select name="Estado" id="estado-br" required>
-          <option value="" selected disabled>Escolher</option>
-          <option value="">Acre</option>
-          <option value="">Alagoas</option>
-          <option value="">Amapá</option>
-          <option value="">Amazonas</option>
-          <option value="">Bahia</option>
-          <option value="">Ceará</option>
-          <option value="">Distrito Federal</option>
-          <option value="">Espírito Santo</option>
-          <option value="">Goiás</option>
-          <option value="">Maranhão</option>
-          <option value="">Mato Grosso</option>
-          <option value="">Mato Grosso do Sul</option>
-          <option value="">Minas Gerais</option>
-          <option value="">Pará</option>
-          <option value="">Paraiba</option>
-          <option value="">Paraná</option>
-          <option value="">Pernambuco</option>
-          <option value="">Piauí</option>
-          <option value="">Rio de Janeiro</option>
-          <option value="">Rio Grande do Sul</option>
-          <option value="">Rondônia</option>
-          <option value="">Roraima</option>
-          <option value="">Santa Catarina</option>
-          <option value="">São Paulo</option>
-          <option value="">Sergipe</option>
-          <option value="">Tocantins</option>
-        </select>
-      </label>
-    </fieldset>
-    <input type="submit" value="finalizar">
-  </form>
+      </fieldset>
+      <button class="submit">
+        finalizar
+      </button>
+    </form>
+  </div>
 </body>
 </html>
