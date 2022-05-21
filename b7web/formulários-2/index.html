@@ -9,8 +9,8 @@
 </head>
 <body>
   <div class="container">
-    <h1>Cadastro</h1>
     <form action="">
+      <h1>Bem Vindo</h1>
       <fieldset id="conta">
         <h2>Login</h2>
         <input class="email" type="email" placeholder="Digite seu e-mail" required>
@@ -22,11 +22,11 @@
         <h2>Dados Cadastrais</h2>
         <div class="tipo-pessoa">
           <label>Pessoa Física<input name="tp" type="radio" required></label>
-          <label>pessoa Jurídica<input name="tp" type="radio" required></label>
+          <label>Pessoa Jurídica<input name="tp" type="radio" required></label>
         </div>
         <div class="dados-pessoa">
           <input type="text" placeholder="Nome Completo" required>
-          <label for="pessoa-sexo">sexo</label>
+          <label for="pessoa-sexo">Sexo</label>
           <select name="sexo" id="pessoa-sexo" required>
             <option value="" disabled selected >Escolher</option>
             <option value="M">Masculino</option>
@@ -34,8 +34,8 @@
           </select>
           <input type="text" name="cpf" placeholder="CPF" maxlength="11" required>
           <input type="number" placeholder="Telefone">
-          <label>data de Nascimento<input type="date" required></label>
-          <label>
+          <label >Data de Nascimento<input style="margin-left:1rem;" type="date" required></label>
+          <label id="check">
             <input type="checkbox" checked>
             Receber Ofertas no e-mail
           </label>
@@ -43,14 +43,6 @@
       </fieldset>
       <fieldset id="entrega">
         <h2>Endereço</h2>
-        <input type="text" placeholder="CEP" required>
-        <input type="text" placeholder="Rua" required>
-        <input type="number" placeholder="Número" required>
-        <label><input type="checkbox"> Sem Número</label>
-        <input type="text" placeholder="Complemento">
-        <input type="text" placeholder="Referência" required>
-        <input type="text" placeholder="Bairro" required>
-        <input type="text" placeholder="Cidade" required>
         <label>
           Estado
           <select name="Estado" id="estado-br" required>
@@ -83,6 +75,15 @@
             <option value="">Tocantins</option>
           </select>
         </label>
+        <input type="text" placeholder="CEP" required>
+        <input type="text" placeholder="Rua" required>
+        <input type="number" placeholder="Número" required>
+        <label id="check"><input type="checkbox"> Sem Número</label>
+        <input type="text" placeholder="Complemento">
+        <input type="text" placeholder="Referência" required>
+        <input type="text" placeholder="Bairro" required>
+        <input type="text" placeholder="Cidade" required>
+        
       </fieldset>
       <button class="submit">
         finalizar
