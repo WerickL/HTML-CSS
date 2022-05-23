@@ -5,20 +5,22 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 :root{
-  --top-height: 60px;
+  --top-height: 50px;
   
 }
 header{
   width: 100vw;
   display: flex;
   justify-content: flex-end;
+  margin-top: 4px;
+  
 }
 .topo{
   display: flex;
   align-items: center;
   gap: 30px;
-  height: var(--top-height);
   padding-inline: 20px;
+  height: var(--top-height); 
 }
 .topo img{
   width: auto;
@@ -47,12 +49,13 @@ header{
 /*Main section*/
 main{
   display: flex;
-  max-width: 500px;
-  height: calc(100vh - var(--top-height));
+  max-width: 610px;
+  height: calc(100vh - (2 * var(--top-height)));
   flex-direction: column;
   align-items: center;
   margin: auto;
   justify-content: center;
+  padding-inline: 15px;
 }
 .logo img{
   max-width:272px;
@@ -95,13 +98,36 @@ main{
   gap: 40px;
   justify-content: center;
   margin-top: 30px;
-  
+ 
 }
 .search-more a{
   text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0);
   font-size: 14px;
-  color: #3c4043;;
+  color: #3c4043;
+  padding: 10px;
 }
 .search-more a:hover{
-  border: 1px solid ;
+  border: 1px solid  rgba(128, 128, 128, 0.329);
+}
+#country{
+  position: fixed;
+  color: #70757a;
+  left: 30px;
+  bottom: 60px;
+  font-size: 15px;
+}
+footer{
+  height: calc(var(--top-height) - 4px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 5%;
+  border-top: 1px solid  rgba(128, 128, 128, 0.329);
+}
+footer a{
+  color: #70757a;
+  padding-inline: 15px;
+  text-decoration: none;
+  font-size: 14px;
 }
